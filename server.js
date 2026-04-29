@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const greeting = process.env.GREETING || 'Hello!';
+
 app.get('/api/message', (req, res) => {
-  res.json({ message: 'Hello from your first Express API!' });
+  res.json({ message: '{"Hello from Render!"}' });
 });
 
 app.listen(3000, () => {
